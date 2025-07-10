@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json.schemastore.org/package",
+    "name": "react-image",
+    "version": "0.1.0",
+    "description": "A comprehensive image utility kit for Next.js, and React. This package is created for learning purposes. Caution is advised when using in production.",
+    "keywords": [
+        "image",
+        "utils",
+        "nextjs",
+        "react",
+        "filter"
+    ],
+    "homepage": "https://github.com/yunrap/react-image#readme",
+    "bugs": "https://github.com/yunrap/react-image/issues",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yunrap/react-image.git"
+    },
+    "license": "MIT",
+    "author": {
+        "email": "dbsdpwl7@gmail.com",
+        "name": "yunrap"
+    },
+    "scripts": {
+        "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+        "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
+        "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
+        "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
+        "md": "markdownlint '*.md'",
+        "md:fix": "markdownlint --fix '*.md'"
+    },
+    "devDependencies": {
+        "@naverpay/editorconfig": "^0.0.4",
+        "@naverpay/eslint-config": "^2.3.0",
+        "@naverpay/markdown-lint": "^0.0.3",
+        "@naverpay/prettier-config": "^1.0.1"
+    },
+    "packageManager": "pnpm@9.7.0",
+    "dependencies": {
+        "lefthook": "^1.12.1",
+        "typescript": "^5.8.3"
+    }
+}
