@@ -2,7 +2,7 @@ import {describe, test, expect} from 'vitest'
 
 import {getFilter} from './index'
 
-describe('getFilter function', () => {
+describe('getFilter function1', () => {
     test('should return default values when no parameters are provided', () => {
         const result = getFilter()
         expect(result).toEqual({
