@@ -1,6 +1,6 @@
 import {ImageFilter} from '$types'
 
-type CSSFilterValue = NonNullable<CSSStyleDeclaration['filter']>
+type CSSFilterValue = CSSStyleDeclaration['filter'] extends null | undefined ? never : CSSStyleDeclaration['filter']
 
 export function getFilter({grayscale = 0, sepia = 0, brightness = 100, contrast = 100, blur = 0}: ImageFilter = {}): {
     filter: CSSFilterValue
@@ -20,4 +20,7 @@ export const JSONParse = (json: string) => {
     } catch {
         return null
     }
+}
+export function getFlags(object: {flags: boolean}) {
+    return object.flags
 }
