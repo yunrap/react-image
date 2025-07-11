@@ -3,6 +3,51 @@
     "name": "react-image",
     "version": "0.1.0",
     "description": "A comprehensive image utility kit for Next.js, and React. This package is created for learning purposes. Caution is advised when using in production.",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/cjs/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/esm/index.d.mts",
+                "default": "./dist/esm/index.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/index.d.ts",
+                "default": "./dist/cjs/index.js"
+            }
+        },
+        "./react": {
+            "import": {
+                "types": "./dist/esm/react.d.mts",
+                "default": "./dist/esm/react.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/react.d.ts",
+                "default": "./dist/cjs/react.js"
+            }
+        },
+        "./next": {
+            "import": {
+                "types": "./dist/esm/next.d.mts",
+                "default": "./dist/esm/next.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/next.d.ts",
+                "default": "./dist/cjs/next.js"
+            }
+        },
+        "./utils": {
+            "import": {
+                "types": "./dist/esm/utils.d.mts",
+                "default": "./dist/esm/utils.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/utils.d.ts",
+                "default": "./dist/cjs/utils.js"
+            }
+        }
+    },
     "keywords": [
         "image",
         "utils",
@@ -12,7 +57,6 @@
     ],
     "homepage": "https://github.com/yunrap/react-image#readme",
     "bugs": "https://github.com/yunrap/react-image/issues",
-    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/yunrap/react-image.git"
@@ -26,6 +70,7 @@
         "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
         "build:dts": "tsup --config tsup.config.mts",
         "clean": "rm -rf dist",
+        "test": "vitest run",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
         "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
@@ -51,7 +96,8 @@
         "typescript": "^5.8.3",
         "vite": "^7.0.4",
         "vite-plugin-dts": "^4.2.1",
-        "vite-tsconfig-paths": "^5.1.4"
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^3.2.4"
     },
     "peerDependencies": {
         "next": "^13.0.0 || ^14.0.0",
