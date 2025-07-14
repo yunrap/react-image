@@ -83,6 +83,7 @@
     "devDependencies": {
         "@babel/plugin-transform-runtime": "^7.28.0",
         "@changesets/cli": "^2.29.5",
+        "@microsoft/api-extractor": "^7.52.8",
         "@naverpay/editorconfig": "^0.0.4",
         "@naverpay/eslint-config": "^2.3.0",
         "@naverpay/markdown-lint": "^0.0.3",
@@ -94,6 +95,7 @@
         "lefthook": "^1.12.1",
         "next": "^15.3.5",
         "react": "^19.1.0",
+        "react-dom": "^19.1.0",
         "rollup-preserve-directives": "^1.1.3",
         "tsup": "^8.5.0",
         "typescript": "^5.8.3",
@@ -104,8 +106,8 @@
     },
     "peerDependencies": {
         "next": "^13.0.0 || ^14.0.0",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
     },
     "peerDependenciesMeta": {
         "next": {
