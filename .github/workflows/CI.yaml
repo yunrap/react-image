@@ -9,6 +9,10 @@ on:
 jobs:
     setup:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                next: [13.4.0, 14.2.21]
+                react: [18.2.0]
         steps:
             - uses: actions/checkout@v4
             - uses: pnpm/action-setup@v4
